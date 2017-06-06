@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Portfolio</title>
+      <link href="css/style.css" type="text/css" rel="stylesheet">
+      <!--This style sheet is for the facebook and twiiter link logos-->
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+      <!--Nav Bar-->
+      <ul>
+         <li><a href="Home.html">Home</a></li>
+         <!--drop down menu-->
+         <li class="dropdown">
+            <a href="About.html" class="dropbtn">About</a>
+            <div class="dropdown-content">
+               <a href="#C1">Myself</a>
+               <a href="#C2">Extra Curricular</a>
+               <a href="#C3">Hobbies</a>
+            </div>
+         </li>
+         <li style="float:right"><a class="active" href="Register.html">Register</a></li>
+      </ul>
+   </head>
+   <body>
+      <div id="logo">
+         Chavin Portfolio
+      </div>
+      <div id="main-content">
+         <div id="left-column">
+            <div id="slideshow"  style="max-width:624px">
+               <img class="mySlides" src="img/car.jpg" style="width:100%">
+               <img class="mySlides" src="img/Elephant.jpg" style="width:100%">
+               <img class="mySlides" src="img/river.jpg" style="width:100%">
+            </div>
+            <div id="logo">
+               A Famous Quote
+            </div>
+            <p>
+               <img src="img/Kobe-Bryant.jpg"/><br>
+               <em >"I'll do whatever it takes to win games, whether it's sitting on a bench waving a towel, handing a cup of water to a teammate, or hitting the game-winning shot.."</em> - Kobe Bryant<br/>
+            </p>
+         </div>
+         <div id="right-column">
+            <aside>
+               <div class="box">
+                  <div class="sidebar">
+                     <h3>Tweeter Feed</h3>
+                     <a class="twitter-timeline" href="https://twitter.com/TwitterDev/timelines/539487832448843776">National Park Tweets - Curated tweets by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+               </div>
+            </aside>
+         </div>
+      </div>
+      <div id="footer">
+         <div class="footer-left">
+            Copyright &copy; 2016 Oc Design. All rights reserved.<br/>
+            <p2 class="footer-links">
+               <a href="Home.html">Home</a>
+               <a href="#"><i class="fa fa-facebook"></i></a>
+               <a href="#"><i class="fa fa-twitter"></i></a>
+            </p2>
+         </div>
+      </div>
+   </body>
+   <!--This is javascript code is for the slideshow transition-->
+   <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+   </script>
+</html>
